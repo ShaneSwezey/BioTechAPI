@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BioTechAPI.Models
@@ -10,11 +12,15 @@ namespace BioTechAPI.Models
         public int PositionId { get; set; }
         [Required]
         public string Title { get; set; }
-        public string Experience { get; set; }
-        public string Qualifications { get; set; }
-        public string Education { get; set; }
-        public string Responsibilites { get; set; }
-        public string PostDate { get; set; }
+        public string PositionStatement { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime PostDate { get; set; }
         public string Schedule { get; set; }
+
+
+        public ICollection<Responsibility> Responsibilites { get; set; }
+        public ICollection<Qualification> Qualifications { get; set; }
+        public ICollection<Experience> Experiences { get; set; }
+        public ICollection<Education> Education { get; set; }
     }
 }
