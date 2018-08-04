@@ -1,7 +1,7 @@
 ﻿using BioTechAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,13 +9,13 @@ namespace BioTechAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PositionsController : Controller
+    public class PositionsController : ControllerBase
     {
         private BioTechContext _context;
 
         public PositionsController(BioTechContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException();
         }
 
         // api/positions/
