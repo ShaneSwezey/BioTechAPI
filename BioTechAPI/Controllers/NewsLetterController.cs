@@ -34,7 +34,7 @@ namespace BioTechAPI.Controllers
 
         [HttpPost]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<NewsLetter>> CreateAsync(string emailAddress)
+        public async Task<ActionResult<NewsLetter>> CreateAsync([FromBody]string emailAddress)
         {
             
             if (await _context.NewsLetters.AnyAsync(n => n.EmailAddress.Equals(emailAddress)))
