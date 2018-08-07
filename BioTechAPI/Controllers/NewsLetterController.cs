@@ -10,7 +10,6 @@ namespace BioTechAPI.Controllers
     [ApiController]
     public class NewsLetterController : ControllerBase
     {
-
         private readonly BioTechContext _context;
 
         public NewsLetterController(BioTechContext context)

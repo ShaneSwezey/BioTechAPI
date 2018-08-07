@@ -12,6 +12,7 @@ namespace BioTechAPI.Models
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Education> Education { get; set; }
         public DbSet<NewsLetter> NewsLetters { get; set; }
+        public DbSet<Question> Questions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
