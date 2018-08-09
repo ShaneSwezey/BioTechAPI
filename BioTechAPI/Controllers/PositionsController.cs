@@ -26,7 +26,7 @@ namespace BioTechAPI.Controllers
         {
             var positionList = await _context.Positions.OrderBy(p => p.PostDate)
                 .Include(p => p.Qualifications)
-                .Include(p => p.Responsibilites)
+                .Include(p => p.Responsibilities)
                 .Include(p => p.Experiences)
                 .Include(p => p.Education)
                 .ToListAsync();

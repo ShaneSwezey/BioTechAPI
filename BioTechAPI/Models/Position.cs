@@ -18,7 +18,7 @@ namespace BioTechAPI.Models
         public string Schedule { get; set; }
 
 
-        public ICollection<Responsibility> Responsibilites { get; set; }
+        public ICollection<Responsibility> Responsibilities { get; set; }
         public ICollection<Qualification> Qualifications { get; set; }
         public ICollection<Experience> Experiences { get; set; }
         public ICollection<Education> Education { get; set; }

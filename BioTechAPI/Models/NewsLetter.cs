@@ -6,7 +6,8 @@ namespace BioTechAPI.Models
     [Table("NewsLetterSubscribers")]
     public class NewsLetter
     {
-        [Required]
+        
+        [Key]
         public int SubscriberID { get; set; }
         
         [Required]
